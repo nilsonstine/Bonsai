@@ -2,6 +2,14 @@
 #include <drv2605.h>
 #include "MAX30105.h" //Get it here: http://librarymanager/All#SparkFun_MAX30105
 #include "heartRate.h"
+#include <AverageValue.h>
+
+// Number of values to calculate with. Prevents memory problems
+const long MAX_VALUES_NUM = 6;
+
+AverageValue<long> averageValue(MAX_VALUES_NUM);
+
+
 MAX30105 particleSensor;
 
 DRV2605 haptic;
@@ -72,7 +80,7 @@ void loop()
     // }
     long irRaw = particleSensor.getIR();
     long irValue = simpleKalmanFilter.updateEstimate(irRaw);
-
+    
     if (checkForBeat(irValue) == true)
     {
         if (!(irValue < 50000))
@@ -88,14 +96,7 @@ void loop()
 
         if (beatsPerMinute < 255 && beatsPerMinute > 20)
         {
-            rates[rateSpot++] = (byte)beatsPerMinute; // Store this reading in the array
-            rateSpot %= RATE_SIZE;                    // Wrap variable
-
-            // Take average of readings
-            beatAvg = 0;
-            for (byte x = 0; x < RATE_SIZE; x++)
-                beatAvg += rates[x];
-            beatAvg /= RATE_SIZE;
+            averageValue.push(beatsPerMinute);
         }
     }
 
@@ -104,7 +105,7 @@ void loop()
     Serial.print(", BPM=");
     Serial.print(beatsPerMinute);
     Serial.print(", Avg BPM=");
-    Serial.print(beatAvg);
+    Serial.print(averageValue.average());
 
     if (irValue < 50000)
         Serial.print(" No finger?");
