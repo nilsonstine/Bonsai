@@ -5,10 +5,9 @@
 #include <AverageValue.h>
 
 // Number of values to calculate with. Prevents memory problems
-const long MAX_VALUES_NUM = 6;
+const long MAX_VALUES_NUM = 5;
 
 AverageValue<long> averageValue(MAX_VALUES_NUM);
-
 
 MAX30105 particleSensor;
 
@@ -80,13 +79,9 @@ void loop()
     // }
     long irRaw = particleSensor.getIR();
     long irValue = simpleKalmanFilter.updateEstimate(irRaw);
-    
+
     if (checkForBeat(irValue) == true)
     {
-        if (!(irValue < 50000))
-        {
-            haptic.drv2605_Play_Waveform(17);
-        }
 
         // We sensed a beat!
         long delta = millis() - lastBeat;
@@ -110,6 +105,19 @@ void loop()
     if (irValue < 50000)
         Serial.print(" No finger?");
 
+    // Calculate haptic interval based on average BPM
+    int avgBpm = averageValue.average();
+    if (avgBpm >= 20 && avgBpm <= 255 && irValue > 50000)
+    {                                        // Adjust the range as needed
+        int hapticInterval = 60000 / avgBpm; // Calculate interval based on average BPM
+        static unsigned long lastHapticTime = 0;
+        unsigned long currentTime = millis();
+        if (currentTime - lastHapticTime >= hapticInterval)
+        {
+            lastHapticTime = currentTime;
+            haptic.drv2605_Play_Waveform(17); // Play the heartbeat waveform
+        }
+    }
     Serial.println();
 }
 // unsigned char i;
