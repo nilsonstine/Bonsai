@@ -95,12 +95,12 @@ void loop()
         }
     }
 
-    Serial.print("IR=");
+    //Serial.print("IR=");
     Serial.print(irValue);
-    Serial.print(", BPM=");
-    Serial.print(beatsPerMinute);
-    Serial.print(", Avg BPM=");
-    Serial.print(averageValue.average());
+   // Serial.print(", BPM=");
+   // Serial.print(beatsPerMinute);
+   // Serial.print(", Avg BPM=");
+   // Serial.print(averageValue.average());
 
     if (irValue < 50000)
         Serial.print(" No finger?");
