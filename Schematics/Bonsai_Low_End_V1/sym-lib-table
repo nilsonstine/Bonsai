@@ -4,4 +4,5 @@
   (lib (name "MOUDLE-SEEEDUINO-XIAO-ESP32C3")(type "KiCad")(uri "${KIPRJMOD}/Lib/MOUDLE-SEEEDUINO-XIAO-ESP32C3.kicad_sym")(options "")(descr ""))
   (lib (name "RE1C002UN")(type "KiCad")(uri "${KIPRJMOD}/Lib/RE1C002UN.kicad_sym")(options "")(descr ""))
   (lib (name "DRV2605LDGSR")(type "KiCad")(uri "${KIPRJMOD}/Lib/DRV2605LDGSR.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_Symbols_Bonsai")(type "KiCad")(uri "${KIPRJMOD}/Custom_Symbols_Bonsai.kicad_sym")(options "")(descr ""))
 )

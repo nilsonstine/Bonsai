@@ -4,4 +4,5 @@
   (lib (name "RE1C002UN")(type "KiCad")(uri "${KIPRJMOD}/Lib/RE1C002UN.pretty")(options "")(descr ""))
   (lib (name "xiao ESP32C3_PCB")(type "KiCad")(uri "${KIPRJMOD}/Lib/xiao ESP32C3_PCB.pretty")(options "")(descr ""))
   (lib (name "DRV2605LDGSR")(type "KiCad")(uri "${KIPRJMOD}/Lib/DRV2605LDGSR.pretty")(options "")(descr ""))
+  (lib (name "BonsaiFootPrintLib")(type "KiCad")(uri "${KIPRJMOD}/BonsaiFootPrintLib.pretty")(options "")(descr ""))
 )
