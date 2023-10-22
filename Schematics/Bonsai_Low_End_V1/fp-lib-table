@@ -3,4 +3,5 @@
   (lib (name "MAX30101EFD")(type "KiCad")(uri "${KIPRJMOD}/Lib/MAX30101EFD.pretty")(options "")(descr ""))
   (lib (name "RE1C002UN")(type "KiCad")(uri "${KIPRJMOD}/Lib/RE1C002UN.pretty")(options "")(descr ""))
   (lib (name "xiao ESP32C3_PCB")(type "KiCad")(uri "${KIPRJMOD}/Lib/xiao ESP32C3_PCB.pretty")(options "")(descr ""))
+  (lib (name "DRV2605LDGSR")(type "KiCad")(uri "${KIPRJMOD}/Lib/DRV2605LDGSR.pretty")(options "")(descr ""))
 )
