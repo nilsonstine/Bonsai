@@ -64,19 +64,11 @@ void setup()
     Serial.begin(115200);
     setupHaptic();
     setupHeart();
-    delay(500);
 }
 
 void loop()
 {
-    // static unsigned long lastTime = 0;
-    // const unsigned long interval = 2000;
-    // unsigned long currentTime = millis();
-    // if (currentTime - lastTime >= interval)
-    //{
-    //     lastTime = currentTime;
-    //     haptic.drv2605_Play_Waveform(118);
-    // }
+
     long irRaw = particleSensor.getIR();
     long irValue = simpleKalmanFilter.updateEstimate(irRaw);
 
@@ -95,12 +87,12 @@ void loop()
         }
     }
 
-    Serial.print("IR=");
+    // Serial.print("IR=");
     Serial.print(irValue);
-    Serial.print(", BPM=");
-    Serial.print(beatsPerMinute);
-    Serial.print(", Avg BPM=");
-    Serial.print(averageValue.average());
+    // Serial.print(", BPM=");
+    // Serial.print(beatsPerMinute);
+    // Serial.print(", Avg BPM=");
+    // Serial.print(averageValue.average());
 
     if (irValue < 50000)
         Serial.print(" No finger?");
