@@ -185,7 +185,7 @@
     )
   )
   (model "${KIPRJMOD}/Lib/xiao ESP32C3_PCB.pretty/Seeed Studio XIAO-ESP32-C3.step"
-    (opacity 0.6600)    (offset (xyz 15 8.75 0))
+    (offset (xyz 15 8.75 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 90 180 90))
   )
