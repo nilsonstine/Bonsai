@@ -1583,11 +1583,11 @@
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 165e006b-7a7e-47c4-866e-91532701e883)
     )
-    (fp_text value "1uF" (at 0 -1.68) (layer "B.Fab")
+    (fp_text value "1uF" (at 0.2125 -2.175) (layer "B.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 2f9f83d8-dd95-47a4-88ec-562b85223566)
     )
-    (fp_text user "${REFERENCE}" (at 0 0) (layer "B.Fab")
+    (fp_text user "${REFERENCE}" (at 0 0.025) (layer "B.Fab")
         (effects (font (size 0.5 0.5) (thickness 0.08)) (justify mirror))
       (tstamp ce156f67-e45b-4c9c-a1dc-d88eb5727764)
     )

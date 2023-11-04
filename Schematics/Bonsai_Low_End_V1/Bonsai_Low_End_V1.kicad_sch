@@ -2508,7 +2508,7 @@
     (property "Reference" "C5" (at 129.54 81.28 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "50uF" (at 129.54 83.82 0)
+    (property "Value" "47uF" (at 129.54 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 127 82.55 0)
