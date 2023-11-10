@@ -25,5 +25,24 @@ fp-info-cache
 *.ses
 
 # Exported BOM files
-*.xml
-*.csv
+#*.xml
+#*.csv
+
+# PlatformIO
+.pio/
+
+# General build outputs
+build/
+
+# Apple/Macintosh
+.DS_Store
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+#!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+__pycache__
