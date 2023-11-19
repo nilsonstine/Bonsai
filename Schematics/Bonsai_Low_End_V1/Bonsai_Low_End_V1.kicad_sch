@@ -9,6 +9,8 @@
     (date "2023-10-23")
     (rev "1")
     (company "Bonsai")
+    (comment 1 "Nils Kiefer")
+    (comment 2 " ")
   )
 
   (lib_symbols
@@ -1513,6 +1515,13 @@
     (effects (font (size 1.27 1.27)) (justify left top))
     (uuid da888a8d-94ba-43ff-bba2-927b16a2ccc4)
   )
+  (text_box "Optional, can jump pads"
+    (at 88.9 66.04 0) (size 5.08 2.54)
+    (stroke (width -0.0001) (type default))
+    (fill (type none))
+    (effects (font (size 0.7 0.7) (color 255 0 24 1)) (justify left top))
+    (uuid de9126e5-3df9-4f6d-88fb-add8d0ea7723)
+  )
 
   (global_label "Bat-" (shape input) (at 106.68 85.09 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
@@ -2631,9 +2640,6 @@
     (pin "1" (uuid a74182aa-8e95-4ab9-9338-215a29eafc82))
     (pin "10" (uuid 43029756-676a-4cb0-ab87-afb6cfbd11d9))
     (pin "11" (uuid ededba98-bb02-48d8-a5f5-ae74397a0193))
-    (pin "12" (uuid 0b4eebc4-0510-4463-b082-10e78a4bbb14))
-    (pin "13" (uuid c9ef434d-e167-42a3-a8f8-59c04a8ade8d))
-    (pin "14" (uuid 71e0be11-c715-47c1-9a97-3b3477e37c21))
     (pin "2" (uuid df455bee-4fde-4e6e-8556-bef10eb2bedc))
     (pin "3" (uuid 796c76de-8d5e-4242-81f8-ef10569d8d23))
     (pin "4" (uuid 39eb39c0-a37a-4723-a7d5-a5c1c92028a1))
@@ -2642,6 +2648,9 @@
     (pin "7" (uuid 7bcff8d2-5091-4871-aaf3-953fb2ef6a28))
     (pin "8" (uuid f236f7fb-de88-49fd-9691-3b0bf05d94ab))
     (pin "9" (uuid b07435e2-8bb0-47ec-a8b7-363aa085a4fe))
+    (pin "12" (uuid 0b4eebc4-0510-4463-b082-10e78a4bbb14))
+    (pin "13" (uuid c9ef434d-e167-42a3-a8f8-59c04a8ade8d))
+    (pin "14" (uuid 71e0be11-c715-47c1-9a97-3b3477e37c21))
     (pin "16" (uuid a86c27bc-2dd9-4cc3-9ec6-b85b4cbbeda5))
     (pin "17" (uuid eeace5e4-b2b2-42c4-904a-bba306fab41f))
     (pin "18" (uuid b8e0f309-33ea-4038-9752-9b3c77d78fa8))
